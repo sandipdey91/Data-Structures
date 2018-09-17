@@ -1,0 +1,24 @@
+1. Organization of Experimental Profiling
+	I have performed an experiment by running all the open and closed(quad and double) hash tables using different random numbers ranging from 0.1m to 0.5m where m denotes the size of each table(ie 1000003).
+	The CPU clock start and end time were noted for each insert and find operation for each hash table and then finally their average was computed to evaluate the result. This operation is executed 5 times 		for each number set at different seed.
+
+2. Input data generating using random number generator
+	To perform this I have used the standard Rand() function that generates random number and made it within the range of 1 to 5m using the mod function of 5m. For every number set(0.1m to 0.5m) I have used 		different seeding. So overall my experiment was performed for 5 number set 0.1m to 0.5m where each number or data was limited to 1 to 5m only and then for each number set 5 times the operation was 		performed for different seeding.
+
+3. CPU time recording in C++.
+	CPU time was recorded using the provided TimerClass where start and end time duration was calculated in seconds and nanoseconds.
+
+4. Data recording and analysis
+	Time duration for each table is noted and shown in the program's output for Insert, Find and Not Found Operation. 
+
+5. Performance comparison, observations and summary.
+	In terms of comparison Insert operation was performed faster by Open Hashing followed by Quadratic Probing and then Double Hashing.
+	But on the other hand Find Operation was performed faster by Double Hashing then Quadratic Probing and lastly by Open Hashing.
+
+	P.S As already stated above each operation was performed on the same number set for each table. 
+
+6. Conclusion
+	Hence from the above experiment I can conclude that the use of the the three hash table will depend upon our choice of operation. 
+	If we are interested in more Insertion and less Find operation then Open Hashing trumps Qudratic Hashing followed by Double Hashing. 
+	But if the Find Operation is on priority then Double Hashing will be the first choice followed by Quadratic and Open Hashing.
+	Finally if we are equally interested in Insert and Find then Quadratic Probing need to be used.

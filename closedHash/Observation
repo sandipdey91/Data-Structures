@@ -1,0 +1,22 @@
+According to my code on Quadratic and Double Hashing probing these are my below observations:
+
+1. The 5 data files have different load factors which obviously increased with every increment of data:
+	data1.txt	LF = 0.18 for both Quadratic and Double Hashing
+	data2.txt	LF = 0.33 for both Quadratic and Double Hashing
+	data3.txt	LF = 0.52 for both Quadratic and Double Hashing
+	data4.txt	LF = 0.67 for both Quadratic and Double Hashing
+	data5.txt	LF = 0.86 for both Quadratic and Double Hashing
+
+2. I was able to insert always for the first two data files ie. when LF is 0.18 and 0.33. 
+	But Insertion failed for some cases in the remaining three data files i.e when LF is 0.52, 0.67 and 0.86.
+
+   This support our corollary as well
+	COROLLARY: 
+	When m is prime and the table is at least half-empty; i.e., 
+	LF < 1/2, we can always insert a new item into 
+	a closed hash table using quadratic probing.
+
+3. Obviously from the above observations we can conclude that Quadratic or Double hashing(open addressing schemes) outperforms 
+   hashing with chaining only if implemented correctly ie considering a prime no always for m(table size) and a Load Factor always
+   less than 1/2.	
+	
